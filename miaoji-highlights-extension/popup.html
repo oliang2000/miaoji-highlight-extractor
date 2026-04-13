@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 260px;
+    padding: 20px;
+    background: #0a0a0f;
+    font-family: 'Courier New', monospace;
+    color: #00ffd5;
+  }
+  h3 {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #00ffd580;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #00ffd5;
+    border: 1px solid #00ffd540;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.15s;
+  }
+  button:hover {
+    background: #00ffd510;
+    border-color: #00ffd5;
+    box-shadow: 0 0 12px #00ffd520;
+  }
+  button:disabled {
+    color: #00ffd540;
+    border-color: #00ffd520;
+    cursor: not-allowed;
+  }
+  #progressWrap {
+    margin-top: 14px;
+    height: 2px;
+    background: #00ffd515;
+    display: none;
+  }
+  #progressBar {
+    height: 100%;
+    width: 0%;
+    background: #00ffd5;
+    box-shadow: 0 0 6px #00ffd580;
+    transition: width 0.2s;
+  }
+  #status {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #00ffd560;
+    min-height: 16px;
+  }
+  #status.error { color: #ff3860; }
+  #status.success { color: #00ffd5; }
+</style>
+</head>
+<body>
+  <h3>// highlights</h3>
+  <button id="exportBtn">[ 导出高亮 (.tsv) ]</button>
+  <div id="progressWrap"><div id="progressBar"></div></div>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
