@@ -14,10 +14,10 @@ start	end	text
 
 ## 安装
 
-1. 下载或 clone 这个仓库
+1. 下载或 clone 这个 repo
 2. 在 Chrome 中打开 `chrome://extensions/`
 3. 打开右上角的「开发者模式」
-4. 点击「加载已解压的扩展程序」，选择这个文件夹
+4. 点击「加载已解压的扩展程序」，选择文件里 miaoji-highlights-extension 文件夹
 
 ## 使用
 
