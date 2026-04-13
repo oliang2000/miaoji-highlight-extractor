@@ -1,29 +1,35 @@
-# Feishu Minutes Highlights Exporter
+# 飞书妙记高亮导出器
 
-A Chrome extension that exports highlighted transcript segments from Feishu Minutes (飞书妙记) as TSV files.
+一个 Chrome 扩展，从飞书妙记的转写文稿中提取高亮片段，导出为带时间戳的 TSV 文件。
 
-## What it does
+## 功能
 
-When reviewing meeting transcripts in Feishu Minutes, you can highlight important segments. This extension extracts all highlighted segments and exports them as a `.tsv` file (tab-separated values), ready for use in spreadsheets or further processing.
+在飞书妙记中查看会议转写时，你可以高亮重要的片段。这个扩展会自动滚动读取整篇转写，提取所有高亮文本及其时间戳，导出为 `.tsv` 文件（制表符分隔），方便在表格或其他工具中使用。
 
-## Install
+输出格式：
+```
+start	end	text
+12.50	15.30	这是一段高亮文本
+```
 
-1. Clone or download this repo
-2. Open `chrome://extensions/` in Chrome
-3. Enable **Developer mode** (top right)
-4. Click **Load unpacked** and select this folder
+## 安装
 
-## Usage
+1. 下载或 clone 这个仓库
+2. 在 Chrome 中打开 `chrome://extensions/`
+3. 打开右上角的「开发者模式」
+4. 点击「加载已解压的扩展程序」，选择这个文件夹
 
-1. Open a Feishu Minutes transcript page
-2. Click the extension icon in the toolbar
-3. Click **[ 导出高亮 (.tsv) ]**
-4. A `.tsv` file will be downloaded with your highlighted segments
+## 使用
 
-## Permissions
+1. 打开一个飞书妙记转写页面
+2. 点击工具栏中的扩展图标
+3. 点击 **[ 导出高亮 (.tsv) ]**
+4. 自动下载包含高亮片段的 `.tsv` 文件
 
-- `activeTab` — Access the current tab to read highlight data
-- `scripting` — Inject the extraction script into the page
+## 权限说明
+
+- `activeTab` — 读取当前标签页的高亮数据
+- `scripting` — 注入提取脚本到页面中
 
 ## License
 
